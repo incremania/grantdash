@@ -33,9 +33,3 @@ let response = fetch('https://dateapi-app.herokuapp.com/user/all', {
     `
    });
 })
-// .then(data => data.forEach(data => {
-    
-//     console.log(data)
-
-   
-// }))
