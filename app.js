@@ -7,13 +7,13 @@ let response = fetch('https://dateapi-app.herokuapp.com/user/all', {
       
 })
 .then(res => res.json())
-.then(data => data.forEach(data => {
-    // console.log(data.splice(3))
-    console.log(data)
-    sectionEl.innerHTML += 
+.then(data => {
+   let filtered = data.filter(data => data.id > 197)
+   filtered.forEach(data => {
+        sectionEl.innerHTML += 
     `
     <div>
-        <p>Number: <span>${data.id}</span></p>
+        <p>Number: <span>${data.id -197}</span></p>
         <p>First name: <span>${data.firstname}</span></p>
         <p>Last name: <span>${data.lastname}</span></p>
         <p>Other name: <span>${data.othername}</span></p>
@@ -31,5 +31,11 @@ let response = fetch('https://dateapi-app.herokuapp.com/user/all', {
         <p>Credit score: <span>${data.credit_score}</span></p>
       </div>
     `
+   });
+})
+// .then(data => data.forEach(data => {
+    
+//     console.log(data)
+
    
-}))
+// }))
