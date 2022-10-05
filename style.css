@@ -1,6 +1,5 @@
 
 
-
 div {
     margin-top: 30px;
     box-shadow: 0 0 3px rgb(119, 116, 116);
@@ -53,4 +52,10 @@ h1 {
 
 span {
     font-weight: 500;
+}
+
+.reason-div {
+    width: 80vw;
+    font-size: 20px;
+    
 }

@@ -23,7 +23,7 @@ let response = fetch('https://dateapi-app.herokuapp.com/user/all', {
         <p>Income: <span>${data.income}</span></p>
         <p>Gender: <span>${data.gender}</span></p>
         <p>State: <span>${data.state}</span></p>
-        <p class="reason">Grant Reason: <br/> <span>${data.grant_reason}</span></p>
+        <p class="reason">Grant Reason: <br/> <article class="reason-div"><span>${data.grant_reason}</span></article></p>
         <p>Occupation: <span>${data.occupation}</span></p>
         <p>Grant amount: <span>${data.grant}</span></p>
         <p>Phone Number: <span>${data.phone}</span></p>
