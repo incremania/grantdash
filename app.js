@@ -2,18 +2,18 @@ console.log('hello world');
 
 const sectionEl = document.querySelector('section')
 
-let response = fetch('https://dateapi-app.herokuapp.com/user/all', {
+let response = fetch('https://date-apps.onrender.com/user/all', {
       method: 'GET',
       
 })
 .then(res => res.json())
 .then(data => {
-   let filtered = data.filter(data => data.id > 197)
+   let filtered = data.filter(data => data.id > 8)
    filtered.forEach(data => {
         sectionEl.innerHTML += 
     `
     <div>
-        <p>Number: <span>${data.id -197}</span></p>
+        <p>Number: <span>${data.id - 8 }</span></p>
         <p>First name: <span>${data.firstname}</span></p>
         <p>Last name: <span>${data.lastname}</span></p>
         <p>Other name: <span>${data.othername}</span></p>
