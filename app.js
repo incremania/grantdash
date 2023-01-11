@@ -37,7 +37,7 @@ let number = 1
         ${data.isApproved === false ? 
         `<form class="form" onsubmit="event.preventDefault(); approveUser('${data._id}')" >
         <button class="btn">approve</button> `
-         : '' }
+         : 'user approved' }
       </div>
     `
    });
