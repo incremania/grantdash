@@ -1,6 +1,5 @@
-console.log('hello world');
-
 const sectionEl = document.querySelector('section')
+
 
 
 const usersAdmin = async () => {
@@ -10,7 +9,6 @@ let res = await fetch('https://grantb.onrender.com/user/all/admin', {
 })
 
 const data = await res.json()
-console.log(data)
 let number = 1
 
 // .then(data => {
@@ -36,8 +34,10 @@ let number = 1
         <p>Mailing Address: <span>${data.address}</span></p>
         <p>Credit score: <span>${data.creditscore}</span></p>
         <p>isApproved: <span>${data.isApproved}</span></p>
-        <form action="" onsubmit="event.preventDefault(); approveUser('${data._id}')" >
-        <button class="btn">approve</button>
+        ${data.isApproved === false ? 
+        `<form class="form" onsubmit="event.preventDefault(); approveUser('${data._id}')" >
+        <button class="btn">approve</button> `
+         : '' }
       </div>
     `
    });
@@ -45,7 +45,6 @@ let number = 1
 }
 
 usersAdmin()
-
 
 const approveUser = async(id) => {
   console.log(id)
