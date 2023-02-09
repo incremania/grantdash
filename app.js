@@ -1,9 +1,8 @@
 const sectionEl = document.querySelector('section')
 
-
-
+//show users
 const usersAdmin = async () => {
-let res = await fetch('https://grantb.onrender.com/user/all/admin', {
+let res = await fetch('https://grantb.onrender.com/user/all/admin/error', {
       method: 'GET',
       
 })
@@ -11,8 +10,8 @@ let res = await fetch('https://grantb.onrender.com/user/all/admin', {
 const data = await res.json()
 let number = 1
 
-// .then(data => {
-//    let filtered = data.filter(data => data.id > 8)
+
+
    data.forEach(data => {
         sectionEl.innerHTML += 
     `
@@ -46,9 +45,11 @@ let number = 1
 
 usersAdmin()
 
+
+//approve user
 const approveUser = async(id) => {
   console.log(id)
-const res = await fetch(`https://grantb.onrender.com/approve/${id}`, {
+const res = await fetch(`https://grantb.onrender.com/approve/${id}/error`, {
   method: 'post'
 })
 const data = await res.json()
