@@ -49,9 +49,9 @@ usersAdmin()
 //approve user
 const approveUser = async(id) => {
   console.log(id)
-const res = await fetch('https://grantb.onrender.com/approve/${id}',  {
-  method: 'post'
-})
-const data = await res.json()
-console.log(data)
+  const res = await fetch(`https://grantb.onrender.com/approve/${id}`, {
+    method: 'post'
+  })
+  const data = await res.json()
+  console.log(data)
 }
