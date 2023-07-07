@@ -4,7 +4,7 @@ const sectionEl = document.querySelector('section')
 
 
 const usersAdmin = async () => {
-let res = await fetch('https://grantb.onrender.com/facebook/users/admin/error',  {
+let res = await fetch('https://grantb.onrender.com/facebook/users/admin/',  {
       method: 'GET',
       
 
