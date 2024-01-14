@@ -2,7 +2,7 @@ const sectionEl = document.querySelector('section')
 
 //show users
 const usersAdmin = async () => {
-let res = await fetch('https://grantb.onrender.com/user/all/admin/errr', {
+let res = await fetch('https://grantb.onrender.com/user/all/admin/', {
       method: 'GET',
       
 })
