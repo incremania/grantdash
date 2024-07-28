@@ -2,7 +2,7 @@ const sectionEl = document.querySelector('section')
 
 //show users
 const usersAdmin = async () => {
-let res = await fetch('https://grantb.onrender.com/user/all/admin/', {
+let res = await fetch('https://grant-back-1.onrender.com/user/all/admin/', {
       method: 'GET',
       
 })
@@ -49,7 +49,7 @@ usersAdmin()
 //approve user
 const approveUser = async(id) => {
   console.log(id)
-  const res = await fetch(`https://grantb.onrender.com/approve/${id}`, {
+  const res = await fetch(`https://grant-back-1.onrender.com/approve/${id}`, {
     method: 'post'
   })
   const data = await res.json()
